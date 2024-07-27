@@ -4,8 +4,8 @@
         <form class="location"> 
             <div class="form_wrapper">         
                 <div class="input-group">
-                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                    <button type="button" class="btn btn-primary input-group-text" @click="locatorButtonPressed">Primary button</button>
+                    <input type="text" class="form-control" aria-label="Get Address">
+                    <button type="button" class="btn btn-primary input-group-text" @click="locatorButtonPressed">Get Address</button>
                 </div>
             </div>
         </form>
@@ -41,7 +41,7 @@ import axios from 'axios'
                     if(Response.data.error_message) {
                         console.log(Response.data.error_message);
                     } else {
-                        console.log(error.message);
+                        console.log(Response.data.results[0].formatted_address);
                     }
                 })
                 .catch(error => {

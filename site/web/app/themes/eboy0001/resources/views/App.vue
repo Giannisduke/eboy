@@ -5,7 +5,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 <template>
   <header class="headtext">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg="You did it!!" />
   </header>
   
   <RouterView />

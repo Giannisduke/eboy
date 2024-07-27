@@ -10,8 +10,9 @@ defineProps({
 <template>
     <h1>{{ msg }}</h1>
     <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
+      Project with
+      <a href="https://roots.io" target="_blank" rel="noopener">Trellis, Bedrock, Sage 10</a> +
+      <a href="https://woocommerce.com/" target="_blank" rel="noopener">Woocommerce</a> +
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
     </h3>
 </template>
