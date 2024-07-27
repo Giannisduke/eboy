@@ -1,0 +1,16 @@
+form {
+    &.location {
+        @include make-row();
+        @extend .justify-content-center;
+        & .form_wrapper {
+            @include make-col-ready();
+
+            @include media-breakpoint-up(sm) {
+                @include make-col(12);
+            }
+            @include media-breakpoint-up(lg) {
+                @include make-col(4);
+            }
+        }
+    }
+}

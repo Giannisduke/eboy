@@ -1,0 +1,4 @@
+footer {
+    @include make-row;
+    @extend .justify-content-evenly;
+}

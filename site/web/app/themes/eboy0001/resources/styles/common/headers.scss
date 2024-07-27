@@ -1,0 +1,48 @@
+header {
+    &.header_001 {
+        @include make-row();
+        @extend .py-3;
+    
+        & .brand {
+            @include make-col-ready();
+    
+            @include media-breakpoint-up(sm) {
+                @include make-col(12);
+            }
+            @include media-breakpoint-up(lg) {
+                @include make-col(12);
+            }
+            @extend .text-center;
+        }
+        & nav.nav-primary {
+            @include make-col-ready();
+    
+            @include media-breakpoint-up(sm) {
+                @include make-col(12);
+            }
+            @include media-breakpoint-up(lg) {
+                @include make-col(12);
+            }
+            & ul {
+                @extend .list-group;
+                @extend .list-group-horizontal;
+                @extend .justify-content-center;
+                & li {
+                     @extend .list-group-item;
+                }
+            }   
+        }
+    }
+    &.headtext {
+        @include make-col-ready();
+
+        @include media-breakpoint-up(sm) {
+            @include make-col(12);
+        }
+        @include media-breakpoint-up(lg) {
+            @include make-col(12);
+        }
+
+        @extend .text-center;
+    }
+}
