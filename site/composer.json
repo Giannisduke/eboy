@@ -85,7 +85,6 @@
     "roots/wordpress": "6.6.1",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.1.0",
-    "roots/acorn": "^3.3",
     "roots/sage": "^10.7.0",
     "wpackagist-theme/twentytwentyfour": "^1.0",
     "wpackagist-plugin/regenerate-thumbnails": "^3.1",
@@ -96,8 +95,9 @@
     "giannisduke/remove-gravity-forms-license": "1.0.4",
     "giannisduke/advanced-custom-fields-pro": "6.2.0",
     "roots/acorn-prettify": "^1.0",
-    "generoi/sage-woocommerce": "^1.1",
-    "automattic/woocommerce": "^3.1"
+    "automattic/woocommerce": "^3.1",
+    "roots/acorn": "^4.3",
+    "generoi/sage-woocommerce": "^1.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",

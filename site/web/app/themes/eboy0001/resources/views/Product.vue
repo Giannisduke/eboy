@@ -1,3 +1,3 @@
 <template>
-  <router-view />
+<h1>Product Page</h1>
 </template>
