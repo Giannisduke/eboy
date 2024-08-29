@@ -1,42 +1,27 @@
 <script setup>
+import { ref } from 'vue'
+
 defineProps({
-  msg: {
-    type: String,
-    required: true,
-  },
-});
+  msg: String,
+})
+
+const count = ref(0)
 </script>
 
 <template>
-    <h1>{{ msg }}</h1>
+  <h1>{{ msg }}</h1>
     <h3>
       Project with
       <a href="https://roots.io" target="_blank" rel="noopener">Trellis, Bedrock, Sage 10</a> +
       <a href="https://woocommerce.com/" target="_blank" rel="noopener">Woocommerce</a> +
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
     </h3>
+    <div class="card">
+    <button type="button" @click="count++">count is {{ count }}</button>
+    <p>
+      Edit
+      <code>components/HelloWorld.vue</code> to test HMR
+    </p>
+  </div>
 </template>
 
-<style scoped>
-h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  top: -10px;
-}
-
-h3 {
-  font-size: 1.2rem;
-}
-
-.greetings h1,
-.greetings h3 {
-  text-align: center;
-}
-
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
-}
-</style>

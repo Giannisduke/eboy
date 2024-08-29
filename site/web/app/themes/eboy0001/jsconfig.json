@@ -28,6 +28,6 @@
     ]
   },
   "files": ["bud.config.js"],
-  "include": ["resources"],
+  "include": ["resources", "resources/views/App.vue"],
   "exclude": ["node_modules", "public"]
 }

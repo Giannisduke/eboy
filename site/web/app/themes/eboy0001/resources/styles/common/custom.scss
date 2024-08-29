@@ -12,6 +12,8 @@
 
     & main {
         @include make-row();
+        @extend .flex-column;
+        @extend .text-center;
 
         & .page-header {
             @include make-col-ready();
