@@ -137,7 +137,7 @@ define('PATH_CURRENT_SITE', env('PATH_CURRENT_SITE') ?: '/');
 define('SITE_ID_CURRENT_SITE', env('SITE_ID_CURRENT_SITE') ?: 1);
 define('BLOG_ID_CURRENT_SITE', env('BLOG_ID_CURRENT_SITE') ?: 1);
 
-Config::define('COOKIE_DOMAIN', $_SERVER['WP_SITEURL']);
+Config::define('COOKIE_DOMAIN', $_SERVER['DOMAIN_CURRENT_SITE']);
 
 Config::define('ALLOW_UNFILTERED_UPLOADS', false);
 
