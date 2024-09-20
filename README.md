@@ -5,7 +5,7 @@
 
 - 🔭 I’m currently working on [eboy.gr](https://eboy.gr)
 
-- 👨‍💻 All of my projects are available at [https://portfolio.eboy.gr](portfolio.eboy.gr)
+- 👨‍💻 All of my projects are available at [portfolio.eboy.gr](https://portfolio.eboy.gr)
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
