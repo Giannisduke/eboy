@@ -140,6 +140,9 @@
   "scripts": {
     "test": [
       "phpcs"
+    ],
+    "post-autoload-dump": [
+      "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
     ]
   }
 }
