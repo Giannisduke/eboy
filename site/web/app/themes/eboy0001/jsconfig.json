@@ -27,7 +27,7 @@
       "@roots/sage"
     ]
   },
-  "files": ["bud.config.js"],
+  "files": ["bud.config.js", "./resources/scripts/router/routes.js"],
   "include": ["resources", "resources/views/App.vue"],
   "exclude": ["node_modules", "public"]
 }

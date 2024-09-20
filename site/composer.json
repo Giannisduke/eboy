@@ -73,6 +73,21 @@
           "composer/installers": "*"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "giannisduke/nuxt-woocommerce-v3",
+        "version": "1.0.0",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/Giannisduke/Nuxt-WooCommerce-v3/archive/refs/tags/1.0.0.zip"
+        },
+        "require": {
+          "composer/installers": "*"
+        }
+      }
     }
   ],
   "require": {
@@ -82,7 +97,7 @@
     "oscarotero/env": "^2.1",
     "roots/bedrock-autoloader": "^1.0",
     "roots/bedrock-disallow-indexing": "^2.0",
-    "roots/wordpress": "6.6.1",
+    "roots/wordpress": "6.6.2",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.1.0",
     "roots/sage": "^10.7.0",
@@ -94,6 +109,7 @@
     "giannisduke/gravityforms": "^2.7",
     "giannisduke/remove-gravity-forms-license": "1.0.4",
     "giannisduke/advanced-custom-fields-pro": "6.2.0",
+    "giannisduke/nuxt-woocommerce-v3": "1.0.0",
     "roots/acorn-prettify": "^1.0",
     "automattic/woocommerce": "^3.1",
     "roots/acorn": "^4.3",

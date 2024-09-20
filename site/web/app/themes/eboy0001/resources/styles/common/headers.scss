@@ -5,6 +5,7 @@ header {
     
         & .brand {
             @include make-col-ready();
+            @include make-col(12);
     
             @include media-breakpoint-up(sm) {
                 @include make-col(12);
@@ -16,6 +17,7 @@ header {
         }
         & nav.nav-primary {
             @include make-col-ready();
+            @include make-col(12);
     
             @include media-breakpoint-up(sm) {
                 @include make-col(12);

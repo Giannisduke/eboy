@@ -1,3 +1,0 @@
-<template>
-    <h1>Home Page Test</h1>
-</template>

@@ -30,9 +30,11 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "axios": "^1.7.2",
+    "@woocommerce/woocommerce-rest-api": "^1.0.1",
+    "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
     "pinia": "^2.1.7",
+    "register-service-worker": "^1.7.2",
     "vue": "^3.4.33",
     "vue-router": "4"
   }
