@@ -15,7 +15,7 @@ wordpress_sites:
       enabled: true
       subdomains: true
     ssl:
-      enabled: true
+      enabled: false
       provider: letsencrypt
     cache:
       enabled: false
