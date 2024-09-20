@@ -8,7 +8,7 @@ vault_users:
   salt: SabK7513LjR4q9pCjCIpSz11lBOTS49ObmGTIH7payFQhEQpGJQkiy9XicmFCWzS
 vault_wordpress_sites:
   eboy.gr:
-    admin_password: eIFrJBRFK7761WzbVvH0KYGYLlLTUGTY6UMfAaoOTT5GV7ZXEQyQxrwqmCO6amoj
+    admin_password: renos1@#
     env:
       db_password: XlW1qq06r1Awpfcc1dwrgd8IT7FID3jbKQpxJE6tIl6NlKFloIktRjRZhYo7Guui
       auth_key: PSn2HdWM5kaLDXyVzhyGZh5moOrD0bJKhao8AzKPStW1Ch4AC9ZDAYvz0aXmnNle
