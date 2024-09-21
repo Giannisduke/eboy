@@ -3,7 +3,7 @@ import Welcome from "../../views/partials/welcome.vue";
 import UserLocation from "../../views/partials/UserLocation.vue";
 import StoreList from "../../views/partials/StoreList.vue";
 const routes = [{
-    path: "/",
+    path: "/wp/",
     component: Welcome,
 },
 {
