@@ -18,7 +18,7 @@ domReady(async () => {
   app.use(createPinia());
   app.use(router);
   
-  app.mount("#dynamic");
+  app.mount("#main");
 });
 
 /**

@@ -14,7 +14,7 @@
 
       @include('sections.header')
 
-      <main class="main">
+      <main id="main" class="main">
         @yield('dynamic')
       </main>
 
