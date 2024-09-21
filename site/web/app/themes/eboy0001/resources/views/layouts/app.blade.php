@@ -14,8 +14,8 @@
 
       @include('sections.header')
 
-      <main id="main" class="main">
-        @yield('content')
+      <main class="main">
+        @yield('dynamic')
       </main>
 
       @hasSection('sidebar')

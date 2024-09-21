@@ -1,5 +1,9 @@
-<header class="header_001 test_head">
+<header class="header_001">
+
   <a class="brand" href="{{ home_url('/') }}">
+  @if ( get_theme_mod( 'site_logo' ) )
+        <img src="<?php echo esc_attr(get_theme_mod( 'site_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+  @endif
     {!! $siteName !!}
   </a>
 
