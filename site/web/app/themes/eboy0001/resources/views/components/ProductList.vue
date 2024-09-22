@@ -69,8 +69,7 @@ export default {
 
 
 <template>
-  <div>
-    <div class="container-fluid">
+    <div class="col-12">
       <!-- Search Section -->
       <div class="search-container flex mb-4 space-x-2">
         <input type="text" v-model="searchQuery" placeholder="Search products..." class="border p-2 flex-grow max-w-60"
@@ -105,7 +104,6 @@ export default {
         </button>
       </div>
     </div>
-  </div>
 </template>
 
 <script>

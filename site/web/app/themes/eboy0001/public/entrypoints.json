@@ -2,10 +2,10 @@
   "app": {
     "js": [
       "js/runtime.3467c1.js",
-      "js/app.ab7bfe.js"
+      "js/app.fbc2ab.js"
     ],
     "css": [
-      "css/app.c47863.css"
+      "css/app.563432.css"
     ],
     "dependencies": [
       "lodash"

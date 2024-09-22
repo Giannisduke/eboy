@@ -1,6 +1,10 @@
 @if ( !empty( get_the_content() ) )
 <section class="content">
-@php(the_content())
+  <div class="row">
+    <div class="col">
+      @php(the_content())
+    </div>
+  </div>
 </section>
 @endif
 @if ($pagination)

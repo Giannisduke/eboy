@@ -19,3 +19,17 @@ lg: 960px,
 xl: 1140px,
 xxl: 1320px
 );
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+
+$list-group-border-radius:4rem;
+$list-group-border-width:0;
