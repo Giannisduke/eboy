@@ -1,9 +1,11 @@
 // apiService.js
 import axios from "axios";
 
-const API_URL = "https://eboy.gr/wp-json/wc/v3/products";
+const API_URL = "https://eboy.gr/wp/wp-json/wc/v3/products";
+// Production keys
 const CONSUMER_KEY = "ck_b449ad2c7591ab8c46110318aa99c1a3c942a368";
 const CONSUMER_SECRET = "cs_a6388d76dcd2d287da59cc6737216135d0a00cb8";
+// Dev keys
 //const CONSUMER_KEY = "ck_a4599a637c0ed4e9d57e950faeadb3079cfe74b5";
 //const CONSUMER_SECRET = "cs_69a3b765113643c00d0100dbe90ddec912fb2e3d";
 const PER_PAGE = 100; // Number of products to fetch per page
