@@ -88,6 +88,21 @@
           "composer/installers": "*"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "giannisduke/rest-api-data-localizer",
+        "version": "1.0.0",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/Giannisduke/rest-api-data-localizer/archive/refs/tags/TestRrelease01.zip"
+        },
+        "require": {
+          "composer/installers": "*"
+        }
+      }
     }
   ],
   "require": {
@@ -110,6 +125,7 @@
     "giannisduke/remove-gravity-forms-license": "1.0.4",
     "giannisduke/advanced-custom-fields-pro": "6.2.0",
     "giannisduke/nuxt-woocommerce-v3": "1.0.0",
+    "giannisduke/rest-api-data-localizer": "1.0.0",
     "roots/acorn-prettify": "^1.0",
     "automattic/woocommerce": "^3.1",
     "roots/acorn": "^4.3",

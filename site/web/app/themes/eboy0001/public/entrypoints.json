@@ -1,17 +1,19 @@
 {
   "app": {
     "js": [
-      "js/runtime.16898d.js",
-      "js/app.74bf91.js"
+      "js/runtime.3467c1.js",
+      "js/app.a8c95a.js"
     ],
     "css": [
       "css/app.c47863.css"
     ],
-    "dependencies": []
+    "dependencies": [
+      "lodash"
+    ]
   },
   "editor": {
     "js": [
-      "js/runtime.16898d.js",
+      "js/runtime.3467c1.js",
       "js/editor.4d0e68.js"
     ],
     "css": [

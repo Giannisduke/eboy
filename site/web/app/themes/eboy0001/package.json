@@ -33,6 +33,7 @@
     "@woocommerce/woocommerce-rest-api": "^1.0.1",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
+    "masonry-layout": "^4.2.2",
     "pinia": "^2.1.7",
     "register-service-worker": "^1.7.2",
     "vue": "^3.4.33",
