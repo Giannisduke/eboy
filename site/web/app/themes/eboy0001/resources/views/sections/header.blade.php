@@ -4,7 +4,6 @@
   @if ( get_theme_mod( 'site_logo' ) )
         <img src="<?php echo esc_attr(get_theme_mod( 'site_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
   @endif
-    {!! $siteName !!}
   </a>
 
   @if (has_nav_menu('primary_navigation'))

@@ -1,8 +1,8 @@
 header {
     @include make-row();
     &.header_001 {
-        @extend .py-3;
-    
+        @extend .pt-3;
+        @extend .pb-5;    
         & .brand {
             @include make-col-ready();
             @include make-col(6);
@@ -16,8 +16,8 @@ header {
             @extend .justify-content-start;
 
             & img {
-                @extend .py-5;
-                @extend .px-5;
+                width: 67px;
+                height: auto;
             }
         }
         & nav.nav-primary {
