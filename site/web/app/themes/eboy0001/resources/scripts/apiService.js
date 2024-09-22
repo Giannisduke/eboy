@@ -8,7 +8,7 @@ const PER_PAGE = 100; // Number of products to fetch per page
 
 export async function fetchData(page = 1) {
   try {
-   cd const response = await axios.get(API_URL, {
+    const response = await axios.get(API_URL, {
       auth: {
         username: CONSUMER_KEY,
         password: CONSUMER_SECRET,
