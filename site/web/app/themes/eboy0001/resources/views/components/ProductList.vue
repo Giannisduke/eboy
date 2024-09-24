@@ -69,6 +69,7 @@ export default {
 
 
 <template>
+  <button @click="console.log">Log</button>
     <div class="col-12">
       <!-- Search Section -->
       <div class="search-container flex mb-4 space-x-2">
@@ -108,7 +109,6 @@ export default {
 
 <script>
 import { fetchData } from '../../scripts/apiService.js';
-import { Masonry } from 'masonry-layout';
 import _ from 'lodash'; // Import lodash debounce
 
 export default {
@@ -183,6 +183,7 @@ export default {
     }, 300) // Adjust debounce delay as needed (300ms here)
   }
 };
+
 
 </script>
 
