@@ -7,13 +7,16 @@ const API_URL = "https://eboy.gr/wp/wp-json/wc/v3/products";
 const CONSUMER_KEY = "ck_b449ad2c7591ab8c46110318aa99c1a3c942a368";
 const CONSUMER_SECRET = "cs_a6388d76dcd2d287da59cc6737216135d0a00cb8";
 // Dev keys
-//const API_URL = "https://eboy.test/wp-json/wc/v3/products";
+//const API_URL = "https://eboy.test/wp-json/wc/v3/products?category=31";
+
+//const API_CAT_URL = "https://eboy.test/wp-json/wc/v3/products/categories";
+
 //const CONSUMER_KEY = "ck_a4599a637c0ed4e9d57e950faeadb3079cfe74b5";
 //const CONSUMER_SECRET = "cs_69a3b765113643c00d0100dbe90ddec912fb2e3d";
 
 const PER_PAGE = 9; // Number of products to fetch per page
 
-export async function fetchData(page = 1) {
+export async function fetchData(page = 1) { 
   try {
     const response = await axios.get(API_URL, {
       auth: {
@@ -25,6 +28,8 @@ export async function fetchData(page = 1) {
         page: page,
       },
     });
+
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error("Error fetching data:", error);

@@ -4,9 +4,10 @@
 
 @extends('layouts.app')
 
-@section('dynamic')
+
+@section('content')
   @while(have_posts()) @php(the_post())
-    @includeFirst(['partials.content-page', 'partials.content'])
-        @include('sections.dynamic')
+    @include('partials.content-page')
+    @include('sections.dynamic')
   @endwhile
 @endsection

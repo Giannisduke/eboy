@@ -1,17 +1,20 @@
 import {createWebHistory, createRouter} from "vue-router";
 import Welcome from "../../views/partials/welcome.vue";
 import UserLocation from "../../views/partials/UserLocation.vue";
-import StoreList from "../../views/partials/StoreList.vue";
-import FilterColor from "../../views/components/filtercolor.vue";
+import Testimonials from "../../views/components/Testimonials.vue";
 import ProductList from '../../views/components/ProductList.vue';
+
 const routes = [{
     path: "/wp/",
     component: ProductList,
 },
 {
+    path: "/testimonials",
+    component: Testimonials,
+},
+{
     path: "/shop/",
-    component: StoreList,
-
+    component: Welcome,
 }];
 const router = createRouter({
     history: createWebHistory(),

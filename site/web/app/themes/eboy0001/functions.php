@@ -66,7 +66,34 @@ collect(['setup', 'filters', 'cpt', 'wp_nav_menu', 'customizer', 'endpoints/endp
 
 
 
-  
+    add_filter( 'upload_mimes', function ( $mimes ) {
+        $mimes['svg'] = 'image/svg+xml';
+    
+        return $mimes;
+    } );
+
+
+    function eboy_get_product_categories() {
+        $taxonomy = "product_cat";
+            $terms = get_terms($taxonomy, array('orderby' => 'slug', 'hide_empty' => false, 'exclude' => array( 19 ))); //Exclude Specific Category by ID
+
+            foreach ($terms as $term) {
+                $thumbnail_id = get_woocommerce_term_meta($term->term_id, 'thumbnail_id', true);
+                $image = wp_get_attachment_url($thumbnail_id); ?>
+
+                <div class="col-12 col-md-3">
+                    <div class="cat-item drop-shadow white-b padding-20 align-center margin-bottom-30">
+                        <?php 
+                            echo '<h3 class="uppercase strong blue-2-c margin-bototm-20 equal-height">' . $term->name . '</h3>';
+                            echo '<div class="item-thumbnail" style="background: url('.$image.');height:150px"></div>'; 
+                            echo '<a href="' . get_term_link($term->name, $taxonomy) . '" class="button color-blue-2-radial">View Range</a>';
+                        ?>
+                    </div>
+                </div>
+                <?php }
+      }
+    add_action('eboy_portfolio', 'eboy_get_product_categories', 10 );
+
     function get_testimonials() {
         $testimonials = array();
         $args = array(

@@ -69,14 +69,20 @@ export default {
 
 
 <template>
-  <button @click="console.log">Log</button>
     <div class="col-12">
       <!-- Search Section -->
       <div class="search-container flex mb-4 space-x-2">
         <input type="text" v-model="searchQuery" placeholder="Search products..." class="border p-2 flex-grow max-w-60"
           @input="debouncedSearch" />
       </div>
-
+      <!-- Filters Sction -->
+       <div class="filters">
+        <li v-for="product in products.categories" :key="product.id">
+        
+          {{ product.categories }}
+        
+        </li>
+       </div>
       <!-- Product Listing Section -->
       <div class="row grid">
         <div v-if="loading" class="text-center">
@@ -85,14 +91,22 @@ export default {
         <div v-else-if="filteredProducts.length === 0" class="text-center">
           No products found.
         </div>
-        <div v-else class="col-sm-6 col-lg-4 mb-4 grid-item" v-for="product in paginatedProducts"
+        <div v-else class="grid-item" v-for="product in paginatedProducts"
           :key="product.id">
+          <div class="card">
+            <div class="card-body">
           <img :src="product.images.length ? product.images[0].src : 'placeholder-image-url.jpg'" :alt="product.name"
             class="img-fluid" loading="lazy" />
           <div>
-            <h2 class="text-xl font-bold mb-2">{{ product.name }}</h2>
-            <p class="text-gray-700 font-bold">Price: DT {{ product.price }}</p>
+              <div v-for="category in product.categories" :key="category.id">
+                  <p>
+                    {{ category.name }}
+                  </p>
+                </div>
+            <p class="card-text">Price: £{{ product.price }}</p>
           </div>
+        </div>
+      </div>
         </div>
       </div>
 
@@ -110,22 +124,27 @@ export default {
 <script>
 import { fetchData } from '../../scripts/apiService.js';
 import _ from 'lodash'; // Import lodash debounce
+import uniq from 'lodash/uniq'
 
 export default {
   name: 'ProductList',
   data() {
     return {
       currentPage: 1,
-      productsPerPage: 20,
+      productsPerPage: 3,
       searchQuery: "",
       products: [],
+      categories: [],
+      inStock: false,
       filteredProducts: [],
       totalPages: 0,
       loading: false
     };
   },
+
   mounted() {
     this.fetchProducts(); // Fetch products when component is mounted
+    
   },
   watch: {
     searchQuery() {
@@ -138,9 +157,37 @@ export default {
       const end = start + this.productsPerPage;
       return this.filteredProducts.slice(start, end);
     },
+    inStockProduct() {
+        var self = this // arrow function below needs to know what this is in data
+
+        return self.products.filter(function(product) {
+          if ( self.inStock === true) {
+            return product.stock_level.raw >= productList.outOfStockThreshold
+          }
+          return product
+        })
+      },
     totalPagesArray() {
       return Array.from({ length: this.totalPages }, (_, i) => i + 1);
-    }
+    },
+    uniqProducts () {
+      var self = this // arrow function below needs to know what this is in data
+
+      return self.products.filter(function(product) {
+        return _.uniqBy(self.categories, 'name')
+      })
+   },
+
+       departmentsItem: function() {
+      return this.departments.reduce((acc,department) =>
+        [ 
+          ...acc, 
+          { type: "department", name: department.name },
+          ...department.items.map(item => ({ type: "item", name: item.label }))
+        ]
+      , []);
+    },
+  
   },
   methods: {
     async fetchProducts(page = 1) {
@@ -177,6 +224,10 @@ export default {
       }
       this.totalPages = Math.ceil(this.filteredProducts.length / this.productsPerPage);
     },
+    toggleInStock() {
+        this.inStock = !this.inStock
+      },
+ 
     // Debounce function for instant search
     debouncedSearch: _.debounce(function () {
       this.applySearchFilter();
